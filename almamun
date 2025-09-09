@@ -1,0 +1,4 @@
+<?php
+// almamun
+
+require __DIR__ . '/console/console.php';
