@@ -46,4 +46,37 @@ class Data
         }
         return false;
     }
+
+    /**
+     * Summary of isValid
+     * @param string $s
+     * @return bool
+     */
+    public function isValid(string $s)
+    {
+        $arr = str_split($s);
+        $stack = [];
+
+        foreach ($arr as $key => $value) {
+            if ($value == '(' || $value == '{' || $value == '[') {
+                $stack[] = $value;
+            } else {
+                if (empty($stack)) {
+                    return false;
+                } elseif (end($stack) == '(' && $value != ')') {
+                    return false;
+                } elseif (end($stack) == '{' && $value != '}') {
+                    return false;
+                } elseif (end($stack) == '[' && $value != ']') {
+                    return false;
+                } else {
+                    unset($stack[array_key_last($stack)]);
+                }
+            }
+        }
+        if (!empty($stack)) {
+            return false;
+        }
+        return true;
+    }
 }
