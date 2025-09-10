@@ -44,15 +44,21 @@ function generateFileFromTemplate($templatePath, $targetDir, $filename, $placeho
  */
 function dump(...$vars)
 {
+    $backtrace = debug_backtrace();
+    $caller_info = $backtrace[1];
+    $file = $caller_info['file'];
+    $line = $caller_info['line'];
+
     echo '<pre>';
     $dataType = gettype($vars[0]);
     if ($dataType == 'array') {
         show_array($vars[0]);
     } elseif ($dataType == 'string' || $dataType == 'integer' || $dataType == 'boolean' || $dataType == NULL) {
         show_dump($vars[0]);
-    }else{
+    } else {
         echo 'It seems like it is an object type data';
     }
+    echo "// $file:$line";
     echo '</pre>';
 }
 
