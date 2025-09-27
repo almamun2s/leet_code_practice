@@ -79,4 +79,43 @@ class Data
         }
         return true;
     }
+
+    // /**
+    //  * @param array $list1
+    //  * @param array $list2
+    //  * @return array
+    //  */
+    // function mergeTwoLists(array $list1, array $list2)
+    // {
+    //     $result = array_merge($list1, $list2);
+
+    //     sort($result);
+
+    //     return $result;
+    // }
+
+    /**
+     * Max profit calculation
+     * @param array $prices
+     * @return int
+     */
+    public function maxProfit($prices)
+    {
+        $min_price = 100000;
+        $max_profit = 0;
+
+        foreach ($prices as $price) {
+            if ( $price < $min_price) {
+                $min_price = $price;
+            }
+
+            $profit = $price - $min_price;
+
+            if ($max_profit < $profit) {
+                $max_profit = $profit;
+            }
+        }
+
+        return $max_profit;
+    }
 }

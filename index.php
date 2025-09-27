@@ -38,24 +38,36 @@
     // $s4 = "([])";
     // $s5 = "([)]";
     
-    dump(
-        $data->isValid("()")
-    );
-    dump(
-        $data->isValid("()[]{}")
-    );
-    dump(
-        $data->isValid("(]")
-    );
-    dump(
-        $data->isValid("([])")
-    );
-    dump(
-        $data->isValid("([)]")
-    );
-    dump(
-        $data->isValid("[")
-    );
+    // dump(
+    //     $data->isValid("()")
+    // );
+    // dump(
+    //     $data->isValid("()[]{}")
+    // );
+    // dump(
+    //     $data->isValid("(]")
+    // );
+    // dump(
+    //     $data->isValid("([])")
+    // );
+    // dump(
+    //     $data->isValid("([)]")
+    // );
+    // dump(
+    //     $data->isValid("[")
+    // );
+
+    // $list1 = [1,2,4];
+    // $list2 = [1,3,4];
+
+    // dump($data->mergeTwoLists($list1, $list2));
+
+    $prices1 = [7,1,5,3,6,4];
+    $prices2 = [7,6,4,3,1];
+
+    dump($data->maxProfit($prices1));
+    dump($data->maxProfit($prices2));
+
     ?>
 </body>
 
