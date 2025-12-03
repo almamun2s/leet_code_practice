@@ -105,7 +105,7 @@ class Data
         $max_profit = 0;
 
         foreach ($prices as $price) {
-            if ( $price < $min_price) {
+            if ($price < $min_price) {
                 $min_price = $price;
             }
 
@@ -117,5 +117,30 @@ class Data
         }
 
         return $max_profit;
+    }
+
+    /**
+     * @param string $s
+     * @return boolean
+     */
+    function isPalindrome($s)
+    {
+        $s = preg_replace("/[^a-zA-Z0-9]/", "", $s);
+        $s = strtolower($s);
+        $rev = strrev($s);
+        return $s == $rev;
+    }
+
+    /**
+     * @param array $nums
+     * @param int $target
+     * @return int
+     */
+    function search($nums, $target)
+    {
+        if (in_array($target, $nums)) {
+            return array_search($target, $nums);
+        }
+        return -1;
     }
 }

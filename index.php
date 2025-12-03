@@ -56,17 +56,35 @@
     // dump(
     //     $data->isValid("[")
     // );
-
+    
     // $list1 = [1,2,4];
     // $list2 = [1,3,4];
-
+    
     // dump($data->mergeTwoLists($list1, $list2));
+    
+    // $prices1 = [7, 1, 5, 3, 6, 4];
+    // $prices2 = [7, 6, 4, 3, 1];
+    
+    // dump($data->maxProfit($prices1));
+    // dump($data->maxProfit($prices2));
+    
+    // $s1 = "A man, a plan, a canal: Panama";
+    // $s2 = "race a car";
+    // $s3 = " ";
+    
+    // dump($data->isPalindrome($s1));
+    // dump($data->isPalindrome($s2));
+    // dump($data->isPalindrome($s3));
+    
+    $nums1 = [-1,0,3,5,9,12];
+    $target1 = 9;
 
-    $prices1 = [7,1,5,3,6,4];
-    $prices2 = [7,6,4,3,1];
+    $nums2 = [-1,0,3,5,9,12];
+    $target2 = 2;
 
-    dump($data->maxProfit($prices1));
-    dump($data->maxProfit($prices2));
+    dump($data->search($nums1, $target1));
+    dump($data->search($nums2, $target2));
+
 
     ?>
 </body>
