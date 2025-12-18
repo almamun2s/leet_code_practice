@@ -143,4 +143,13 @@ class Data
         }
         return -1;
     }
+
+    /**
+     * @param integer $n
+     * @return integer
+     */
+    function reverseBits($n)
+    {
+        return bindec(strrev(str_pad(decbin($n), 32, '0', STR_PAD_LEFT)));
+    }
 }

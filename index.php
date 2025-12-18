@@ -76,14 +76,20 @@
     // dump($data->isPalindrome($s2));
     // dump($data->isPalindrome($s3));
     
-    $nums1 = [-1,0,3,5,9,12];
-    $target1 = 9;
+    // $nums1 = [-1,0,3,5,9,12];
+    // $target1 = 9;
 
-    $nums2 = [-1,0,3,5,9,12];
-    $target2 = 2;
+    // $nums2 = [-1,0,3,5,9,12];
+    // $target2 = 2;
 
-    dump($data->search($nums1, $target1));
-    dump($data->search($nums2, $target2));
+    // dump($data->search($nums1, $target1));
+    // dump($data->search($nums2, $target2));
+
+    $num1 = 43261596;
+    $num2 = 2147483644;
+
+    dump($data->reverseBits($num1));
+    dump($data->reverseBits($num2));
 
 
     ?>
